@@ -3,8 +3,8 @@
   и их переопределение под различные устройства
 */
 
-/*переменные для светлой темы*/
 :root {
+  /*переменные для светлой темы*/
   --var-text-color: #353430;
   --var-title-h1-color: #ffc2e6;
   --var-rectangle-color: #ff8dcb;
@@ -13,10 +13,8 @@
   --var-color-link-shadow: #ff8dcb;
   --var-color-border-hover: rgba(50, 49, 45, 0.4);
   --back-image: url("../images/cover-image-light.png");
-}
 
-/*переменные для темной темы*/
-:root {
+  /*переменные для темной темы*/
   --var-text-color: #f1b2ce;
   --var-rectangle-text-color: #000028;
   --var-title-h1-color: #db00ff;
@@ -26,5 +24,4 @@
   --var-color-link-shadow: #ff0070;
   --var-color-border-hover: rgba(255, 0, 112, 0.4);
   --back-image: url("../images/cover-image-dark.png");
-  color-scheme: dark;
 }
