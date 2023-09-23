@@ -9,10 +9,15 @@
   max-inline-size: 1024px;
 }
 
+/* Стили для области заголовка страницы */
 .header {
   position: relative;
   display: grid;
+  min-block-size: 768px;
+
 }
+
+/* Стили для текста "REC" */
 .decorative-rec {
   display: none;
   position: absolute;
@@ -27,6 +32,7 @@
   color: var(--var-color-h2-and-button);
 }
 
+/* Стили для декоративных уголков */
 .decorated-zone::before,
 .decorated-zone::after {
   content: "";
@@ -36,6 +42,7 @@
   background-color: transparent; /* Цвет фона уголка (тот же, что и у заголовка) */
 }
 
+/* Стили для правого декоративного уголка */
 .decorated-zone::before {
   /*  правый */
   top: 20px;
@@ -44,6 +51,7 @@
   border-right: 2px solid var(--var-color-h2-and-button); /* Граница справа (белого цвета) */
 }
 
+/* Стили для левого декоративного уголка */
 .decorated-zone::after {
   /* левый */
   bottom: 20px;
@@ -51,7 +59,7 @@
   border-bottom: 2px solid var(--var-color-h2-and-button); /* Граница снизу (белого цвета) */
   border-left: 2px solid var(--var-color-h2-and-button); /* Граница слева (белого цвета) */
 }
-
+/* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .decorated-zone::after {
     bottom: -28px;
@@ -60,18 +68,19 @@
 
 /* Стили для точки справа от "REC" */
 .decorative-rec::after {
-  content: ""; /* Пустой контент для создания точки */
+  content: "";
   position: absolute;
-  top: 50%; /* Расположение по вертикали в середине элемента */
-  right: -20px; /* Расположение точки справа от текста "REC" */
-  width: 10px; /* Ширина точки */
-  height: 10px; /* Высота точки */
-  background-color: var(--var-color-h2-and-button); /* Цвет точки */
+  top: 50%;
+  right: -20px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--var-color-h2-and-button);
   filter: drop-shadow(0px 0px 4px var(--var-color-h2-and-button));
-  border-radius: 50%; /* Закругление точки, чтобы она выглядела как круг */
-  transform: translateY(-50%); /* Для вертикального выравнивания точки */
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px) {
   .decorated-zone::after {
     bottom: -56px;
@@ -93,6 +102,7 @@
   }
 }
 
+/* Стили для списка элементов list */
 .header__theme-menu-list {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -103,6 +113,7 @@
   margin-top: 20px;
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .header__theme-menu-list {
     display: grid;
@@ -114,6 +125,7 @@
   }
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px) {
   .header__theme-menu-list {
     display: grid;
@@ -125,6 +137,7 @@
   }
 }
 
+/* Стили для кнопок list*/
 .header__theme-menu-button {
   width: 70px;
   background-color: transparent;
@@ -140,23 +153,30 @@
   cursor: pointer;
 }
 
+/* Стили для кнопок  при наведении на них */
 .header__theme-menu-button:hover {
   border: 1px solid var(--var-color-border-hover);
 }
+
+/* Стили для фокуса кнопки */
 .header__theme-menu-button:focus {
   outline: none;
   border-bottom: 1px solid var(--var-color-h2-and-button);
 }
 
+/* Стили для активной кнопки  */
 .header__theme-menu-button_active {
   border: 1px solid var(--var-color-h2-and-button);
 }
 
-.header__text {
+/* Стили для заголовка */
+.header__container {
   display: grid;
   grid-template-rows: repeat(2, auto);
   margin-top: 278px;
 }
+
+/* Стили для текста в заголовке */
 .title {
   color: var(--var-title-h1-color);
   text-shadow: 4px 4px 0px var(--var-color-shadow);
@@ -167,8 +187,9 @@
   line-height: 82.5%; /* 129.525px */
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
-  .header__text {
+  .header__container {
     margin-top: 176px;
   }
   .title {
@@ -176,8 +197,9 @@
   }
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px) {
-  .header__text {
+  .header__container{
     margin-top: 72px;
     margin-left: 10px;
   }
@@ -186,6 +208,7 @@
   }
 }
 
+/* Стили для прямоугольника */
 .rectangle {
   background-color: var(--var-rectangle-color);
 }
@@ -194,6 +217,7 @@
   margin: 114px 20px 134px auto;
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .header__rectangle {
     width: 364px;
@@ -201,6 +225,7 @@
   }
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px) {
   .header__rectangle {
     width: 355px;
@@ -208,6 +233,7 @@
   }
 }
 
+/* Стили для текста в прямоугольнике */
 .rectangle-text {
   color: var(--var-rectangle-text-color);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
@@ -217,6 +243,7 @@
   line-height: 23.4px; /* 130% */
 }
 
+/* Стили для раздела "Почему сосредоточиться так сложно" */
 .main-content__section-why {
   display: grid;
   grid-template-columns: repeat(1, auto auto);
@@ -225,6 +252,7 @@
   gap: 20px;
 }
 
+/* Стили для заголовков раздела */
 .main-content__titles {
   color: var(--var-color-h2-and-button);
   font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
@@ -235,6 +263,7 @@
   max-width: 315px;
 }
 
+/* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .main-content__section-why {
     margin: 48px 20px 0 0;
@@ -402,8 +431,9 @@
   padding-top: 60px;
   text-align: center;
   justify-content: center;
-}
+  min-block-size: 768px;
 
+}
 @media screen and (max-width: 375px) {
   .main-content__section-picture {
     min-width: 355px;
