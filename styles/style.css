@@ -13,8 +13,18 @@
 .header {
   position: relative;
   display: grid;
+  grid-template-rows: repeat(1, 310px auto);
   min-block-size: 768px;
-
+}
+@media screen and (max-width: 768px) {
+  .header {
+    min-block-size: 1024px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    min-block-size: 668px;
+  }
 }
 
 /* Стили для текста "REC" */
@@ -62,7 +72,7 @@
 /* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .decorated-zone::after {
-    bottom: -28px;
+    bottom: 20px;
   }
 }
 
@@ -83,7 +93,7 @@
 /* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px) {
   .decorated-zone::after {
-    bottom: -56px;
+    bottom: 10px;
     left: 10px;
   }
 }
@@ -97,7 +107,7 @@
 
 @media screen and (max-width: 375px) {
   .decorative-rec {
-    top: 10px; /* Расположение от верхнего края */
+    top: 13px; /* Расположение от верхнего края */
     right: 40px; /* Расположение от правого края */
   }
 }
@@ -119,7 +129,7 @@
     display: grid;
     grid-template-columns: auto;
     float: right;
-    margin-top: 195px;
+    margin-top: 192px;
     margin-right: 19px;
     gap: 15px;
   }
@@ -127,11 +137,14 @@
 
 /* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px) {
+  .header__theme-menu {
+    height: 200px;
+  }
   .header__theme-menu-list {
     display: grid;
     grid-template-columns: auto;
     float: right;
-    margin-top: 75px;
+    margin-top: 78px;
     margin-right: 19px;
     gap: 15px;
   }
@@ -172,8 +185,8 @@
 /* Стили для заголовка */
 .header__container {
   display: grid;
-  grid-template-rows: repeat(2, auto);
-  margin-top: 278px;
+  grid-template-rows: repeat(1, 150px 1fr);
+  margin-top: 10px;
 }
 
 /* Стили для текста в заголовке */
@@ -190,7 +203,7 @@
 /* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .header__container {
-    margin-top: 176px;
+    margin-top: 154px;
   }
   .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -199,8 +212,8 @@
 
 /* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px) {
-  .header__container{
-    margin-top: 72px;
+  .header__container {
+    margin-top: -70px;
     margin-left: 10px;
   }
   .title {
@@ -214,14 +227,14 @@
 }
 .header__rectangle {
   width: 491px;
-  margin: 114px 20px 134px auto;
+  margin: 93px 20px 134px auto;
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .header__rectangle {
     width: 364px;
-    margin: 164px 20px 134px auto;
+    margin: 110px 20px 0px auto;
   }
 }
 
@@ -229,7 +242,7 @@
 @media screen and (max-width: 375px) {
   .header__rectangle {
     width: 355px;
-    margin: 56px 20px 0 0;
+    margin: 95px 20px 0 0;
   }
 }
 
@@ -247,8 +260,7 @@
 .main-content__section-why {
   display: grid;
   grid-template-columns: repeat(1, auto auto);
-  margin: 0 20px 0 20px;
-  padding-top: 60px;
+  margin: 60px 20px 0 20px;
   gap: 20px;
 }
 
@@ -266,7 +278,7 @@
 /* Медиа-запрос для экранов с максимальной шириной 768px */
 @media screen and (max-width: 768px) {
   .main-content__section-why {
-    margin: 48px 20px 0 0;
+    margin: 60px 20px 0 0;
   }
   .main-content__titles {
     max-width: 236px;
@@ -289,8 +301,7 @@
 
   .main-content__section-why {
     display: grid;
-    margin-right: 0px;
-    margin-top: 46px;
+    margin-top: 40px;
     max-width: 355px;
     grid-template-columns: none;
   }
@@ -432,8 +443,20 @@
   text-align: center;
   justify-content: center;
   min-block-size: 768px;
-
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    min-block-size: 1024px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    min-block-size: 668px;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .main-content__section-picture {
     min-width: 355px;
@@ -513,13 +536,13 @@
 
 @media screen and (max-width: 768px) {
   .decorative-footer::after {
-    bottom: -125px;
+    bottom: -40px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .decorative-footer::after {
-    bottom: -275px;
+    bottom: -30px;
     left: 10px;
   }
 }
