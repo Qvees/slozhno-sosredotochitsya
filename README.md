@@ -1,1 +1,1 @@
-https://github.com/Qvees/ono-tebe-nado.git
+https://github.com/Qvees/slozhno-sosredotochitsya.git
