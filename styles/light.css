@@ -16,6 +16,7 @@
   --var-color-shadow: #ff0070;
   --var-color-link-shadow: #ff8dcb;
   --var-color-border-hover: rgba(50, 49, 45, 0.4);
+  --var-background-color: #FFF1F7;
   --back-image: url("../images/cover-image-light.png");
 }
 
@@ -29,6 +30,7 @@
     --var-color-shadow: #ff0070;
     --var-color-link-shadow: #ff8dcb;
     --var-color-border-hover: rgba(50, 49, 45, 0.4);
+    --var-background-color: #FFF1F7;
     --back-image: url("../images/cover-image-light.png");
   }
 }

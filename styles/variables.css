@@ -12,6 +12,7 @@
   --var-color-shadow: #ff0070;
   --var-color-link-shadow: #ff8dcb;
   --var-color-border-hover: rgba(50, 49, 45, 0.4);
+  --var-background-color: #FFF1F7;
   --back-image: url("../images/cover-image-light.png");
 
   /*переменные для темной темы*/
@@ -23,5 +24,6 @@
   --var-color-shadow: #ff0070;
   --var-color-link-shadow: #ff0070;
   --var-color-border-hover: rgba(255, 0, 112, 0.4);
+  --var-background-color: #000028;
   --back-image: url("../images/cover-image-dark.png");
 }
