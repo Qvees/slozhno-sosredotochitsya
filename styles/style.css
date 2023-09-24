@@ -375,6 +375,9 @@
   display: grid;
   gap: 20px;
 }
+.main-content__section-how-rectangle-titles {
+  font-weight: 400;
+}
 
 @media screen and (max-width: 375px) {
   .main-content__section-how {
@@ -547,7 +550,8 @@
 }
 
 @media screen and (max-width: 375px) {
-  .decorative-footer::after { /*леаый*/
+  .decorative-footer::after {
+    /*леаый*/
     bottom: 125px;
     left: 10px;
   }
