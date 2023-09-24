@@ -480,6 +480,7 @@
 .footer {
   position: relative;
   min-block-size: 768px;
+  height: 100vh;
   display: grid;
   text-align: center;
   justify-content: center;
@@ -504,7 +505,7 @@
 
 @media screen and (max-width: 768px) {
   .footer-text-box {
-    padding-top: 85.5vh;
+    padding-top: 63.5vh;
     margin: 0 auto;
   }
 }
@@ -512,7 +513,7 @@
 @media screen and (max-width: 375px) {
   .footer-text-box {
     margin: 0 auto;
-    padding-top: 53.5vh;
+    padding-top: 40vh;
   }
 }
 
@@ -533,7 +534,7 @@
 }
 
 .decorative-footer::after {
-  bottom: 15px;
+  bottom: 165px;
   left: 20px; /*  левый */
   border-bottom: 2px solid var(--var-color-h2-and-button); /* Граница снизу (белого цвета) */
   border-left: 2px solid var(--var-color-h2-and-button); /* Граница слева (белого цвета) */
@@ -546,8 +547,8 @@
 }
 
 @media screen and (max-width: 375px) {
-  .decorative-footer::after {
-    bottom: -30px;
+  .decorative-footer::after { /*леаый*/
+    bottom: 125px;
     left: 10px;
   }
 }
