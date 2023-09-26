@@ -24,24 +24,6 @@
   --var-main-font: "IBM Plex mono";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --var-text-color: #f1b2ce;
-    --var-rectangle-text-color: #000028;
-    --var-title-h1-color: #db00ff;
-    --var-color-h2-and-button: #ff0070;
-    --var-rectangle-color: #ff0070;
-    --var-color-shadow: #ff0070;
-    --var-color-shadow-width768and375: #ff0070;
-    --var-color-link-shadow: #ff0070;
-    --var-color-border-hover: rgba(255, 0, 112, 0.4);
-    --var-background-color: #000028;
-    --back-image: url("../images/cover-image-dark.png");
-    --var-spare-fonts: "Courier New", Courier, "Lucida Sans Typewriter",
-      "Lucida Typewriter", monospace;
-    --var-main-font: "IBM Plex mono";
-  }
-}
 .page.theme_dark .decorative-rec {
   display: block;
 }
