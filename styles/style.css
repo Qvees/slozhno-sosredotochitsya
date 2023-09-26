@@ -1,3 +1,7 @@
+/*Немного не понимаю как реализовать интервалы медизапросов, сделал пока так. Не понял, нужно сделать чтобы от 375px до 767 
+оставалось все так как при 375px, чтобы элементы были нормального размера. Остальные вроде поправил. 
+При размере 375px иногда появляется пространство справа, не могу понять это из за скролла или из за header-а. Если это хедер то почему он вылазит там же все в грид*/
+
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   background-image: var(--back-image);
@@ -17,13 +21,14 @@
   min-height: 100vh;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .header {
     min-block-size: 1024px;
     min-height: 100vh;
   }
 }
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 375px), (max-width: 767px) {
   .header {
     min-block-size: 668px;
     min-height: 100vh;
@@ -75,21 +80,21 @@
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .decorated-zone::after {
     bottom: 20px;
   }
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 375px */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .decorated-zone::after {
     bottom: 10px;
     left: 10px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .decorated-zone::before {
     top: 10px;
     right: 10px;
@@ -110,7 +115,7 @@
   transform: translateY(-50%);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .decorative-rec {
     display: block;
     top: 10px; /* Расположение от верхнего края */
@@ -134,7 +139,7 @@
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .header__theme-menu-list {
     display: grid;
     grid-template-columns: auto;
@@ -145,7 +150,7 @@
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 375px */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .header__theme-menu-list {
     display: grid;
     grid-template-columns: auto;
@@ -209,7 +214,7 @@
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .header__container {
     margin-top: 50px;
     gap: 162px;
@@ -228,7 +233,7 @@
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 375px */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .header__container {
     margin-left: 10px;
     margin-top: 40px;
@@ -251,14 +256,14 @@
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .header__rectangle {
     width: 364px;
   }
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 375px */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .header__rectangle {
     width: 355px;
     margin: 0 20px 0 0;
@@ -301,7 +306,7 @@
 }
 
 /* Медиа-запрос для экранов с максимальной шириной 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .main-content__section-why {
     margin: 0 20px 0 0;
   }
@@ -319,7 +324,7 @@
   gap: 20px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .main-content {
     min-width: 355px;
     margin-top: 40px;
@@ -362,7 +367,7 @@
   gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .main-content__section-what-text-container {
     grid-template-columns: none;
   }
@@ -371,7 +376,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .main-content__section-what {
     margin: 50px 0 0 10px;
     max-width: 355px;
@@ -396,7 +401,7 @@
   font-weight: 400;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .main-content__section-how {
     grid-template-columns: none;
     margin: 50px 0 0 10px;
@@ -422,7 +427,7 @@
   margin: 80px 20px 0 20px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .main-content__section-picture {
     max-width: 355px;
   }
@@ -469,7 +474,7 @@
   grid-row: 3 / 4;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .main-content__section-picture {
     min-width: 355px;
     margin: 50px 0 0 10px;
@@ -517,7 +522,7 @@
   text-shadow: 2px 2px 0px var(--var-color-shadow);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .footer {
     min-block-size: 1024px;
     min-height: 100vh;
@@ -534,7 +539,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .footer {
     min-block-size: 668px;
     min-height: 100vh;
@@ -572,13 +577,13 @@
   border-left: 1px solid var(--var-color-h2-and-button); /* Граница слева (белого цвета) */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-width: 1023px) {
   .decorative-footer::after {
     bottom: 20px;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .decorative-footer::after {
     /*леаый*/
     bottom: 10px;
@@ -586,7 +591,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px), (max-width: 767px) {
   .decorative-footer::before {
     top: 10px;
     right: 10px; /*  правый */
