@@ -1,6 +1,4 @@
-/*Немного не понимаю как реализовать интервалы медизапросов, сделал пока так. Не понял, нужно сделать чтобы от 375px до 767 
-оставалось все так как при 375px, чтобы элементы были нормального размера. Остальные вроде поправил. 
-При размере 375px иногда появляется пространство справа, не могу понять это из за скролла или из за header-а. Если это хедер то почему он вылазит там же все в грид*/
+/*Вроде все исправил*/
 
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
@@ -156,7 +154,7 @@
     grid-template-columns: auto;
     float: right;
     margin-top: 43px;
-    margin-right: 19px;
+    margin-right: 10px;
     gap: 15px;
   }
 }
@@ -226,7 +224,7 @@
   }
 }
 
-@media screen and (prefers-color-scheme: light) {
+@media screen and (prefers-color-scheme: light) and (max-width: 768px) {
   .title {
     text-shadow: 4px 4px 0px var(--var-color-shadow-width768and375);
   }
@@ -265,8 +263,8 @@
 /* Медиа-запрос для экранов с максимальной шириной 375px */
 @media screen and (max-width: 375px), (max-width: 767px) {
   .header__rectangle {
-    width: 355px;
-    margin: 0 20px 0 0;
+    max-width: 355px;
+    margin-right: 10px;
   }
 }
 
@@ -333,8 +331,8 @@
 
   .main-content__section-why {
     display: grid;
-    max-width: 355px;
-    grid-template-columns: none;
+    min-width: 355px;
+    grid-template-columns: repeat(1, auto);
   }
   .main-content__title-why {
     margin-left: 10px;
@@ -378,12 +376,17 @@
 
 @media screen and (max-width: 375px), (max-width: 767px) {
   .main-content__section-what {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
     margin: 50px 0 0 10px;
-    max-width: 355px;
+    min-width: 355px;
   }
 
   .main-content__titles {
     min-width: 355px;
+  }
+  .main-content__section-what__article {
+    margin-right: 10px;
   }
 }
 
@@ -405,7 +408,10 @@
   .main-content__section-how {
     grid-template-columns: none;
     margin: 50px 0 0 10px;
-    max-width: 355px;
+    min-width: 355px;
+  }
+  .main-content__section-how__article {
+    margin-right: 10px;
   }
 }
 
@@ -425,12 +431,6 @@
   display: grid;
   gap: 20px;
   margin: 80px 20px 0 20px;
-}
-
-@media screen and (max-width: 375px), (max-width: 767px) {
-  .main-content__section-picture {
-    max-width: 355px;
-  }
 }
 
 .main-content__gallery {
@@ -477,7 +477,7 @@
 @media screen and (max-width: 375px), (max-width: 767px) {
   .main-content__section-picture {
     min-width: 355px;
-    margin: 50px 0 0 10px;
+    margin: 50px 10px 0 10px;
     gap: 10px;
   }
 
@@ -533,12 +533,6 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .footer-text {
-    text-shadow: 2px 2px 0px var(--var-color-shadow-width768and375);
-  }
-}
-
 @media screen and (max-width: 375px), (max-width: 767px) {
   .footer {
     min-block-size: 668px;
@@ -550,7 +544,7 @@
   }
 
   .footer-text {
-    text-shadow: 2px 2px 0px var(--var-color-shadow);
+    text-shadow: 2px 2px 0px var(--var-color-shadow-width768and375);
   }
 }
 

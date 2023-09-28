@@ -8,6 +8,7 @@
   --var-text-color: #353430;
   --var-title-h1-color: #ffc2e6;
   --var-rectangle-color: #ff8dcb;
+  --var-rectangle-text-color: #353430;
   --var-color-h2-and-button: #353430;
   --var-color-shadow: #ff0070;
   --var-color-shadow-width768and375: #ff8dcb;
@@ -15,8 +16,7 @@
   --var-color-border-hover: rgba(50, 49, 45, 0.4);
   --var-background-color: #fff1f7;
   --back-image: url("../images/cover-image-light.png");
-  --var-spare-fonts: "Courier New", Courier, "Lucida Sans Typewriter",
-    "Lucida Typewriter", monospace;
+  --var-spare-fonts: "Courier New", "Lucida Sans Typewriter", monospace;
   --var-main-font: "IBM Plex mono";
 
   /*переменные для темной темы*/
@@ -31,7 +31,6 @@
   --var-color-border-hover: rgba(255, 0, 112, 0.4);
   --var-background-color: #000028;
   --back-image: url("../images/cover-image-dark.png");
-  --var-spare-fonts: "Courier New", Courier, "Lucida Sans Typewriter",
-    "Lucida Typewriter", monospace;
+  --var-spare-fonts: "Courier New", "Lucida Sans Typewriter", monospace;
   --var-main-font: "IBM Plex mono";
 }
